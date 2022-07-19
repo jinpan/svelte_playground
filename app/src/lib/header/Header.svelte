@@ -16,14 +16,21 @@
     </svg>
     <ul>
       <li class:active={$page.url.pathname === '/'}><a sveltekit:prefetch href="/">Home</a></li>
-      <li class:active={$page.url.pathname === '/about'}>
+      <!-- <li class:active={$page.url.pathname === '/about'}>
         <a sveltekit:prefetch href="/about">About</a>
       </li>
       <li class:active={$page.url.pathname === '/todos'}>
         <a sveltekit:prefetch href="/todos">Todos</a>
-      </li>
+      </li> -->
+      <!-- The menu doesn't intelligently turn into a hambuger, so just use short values here -->
       <li class:active={$page.url.pathname === '/counter'}>
-        <a sveltekit:prefetch href="/counter">Counter</a>
+        <a sveltekit:prefetch href="/counter">1</a>
+      </li>
+      <li class:active={$page.url.pathname === '/temp_converter'}>
+        <a sveltekit:prefetch href="/temp_converter">2</a>
+      </li>
+      <li class:active={$page.url.pathname === '/flight_booker'}>
+        <a sveltekit:prefetch href="/flight_booker">3</a>
       </li>
     </ul>
     <svg viewBox="0 0 2 3" aria-hidden="true">
