@@ -1,9 +1,21 @@
 This project is a svelte playground.
 
+We will implement the some of the [7 Tasks GUI Benchmark](https://eugenkiss.github.io/7guis/tasks)
+here.  This has been [done before](https://svelte.dev/examples/7guis-counter), and this serves as an
+exercise for myself to better understand how to use svelte(kit).
+
 ## Running
 See the [Setup](#setup) section for how this playground was initially configured.
 
+Run the `./run_local.sh` script to start the docker container.  Open `localhost:5173` in a browser
+window.
 
+For continuous checks, run `docker exec svelte_playground npm run check:watch`, which in turn calls
+[svelte-check](https://www.npmjs.com/package/svelte-check) and warns on unused css, a11y hints, and
+typescript compilation errors.
+
+This doesn't run the linter and tests.  That should probably be run on CI and during the late stages
+of development, and there doesn't seem to be a continuous runner configured for us.
 
 ## Setup
 
@@ -28,7 +40,7 @@ npm create svelte@latest app
 cd app && npm install
 ```
 
-These were the chosen options.
+These were the chosen options:
 
 | Question | Answer |
 | -------- | ------ |
