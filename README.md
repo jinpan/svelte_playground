@@ -59,6 +59,8 @@ server: {
 }
 ```
 
+`app2` was created in a similar manner, but chose `Skeleton project` rather than the `SvelteKit Demo app`.
+
 Some minor changes were made to `.prettierrc`.
 
 ## Historical Archive
