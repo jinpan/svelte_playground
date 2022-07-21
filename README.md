@@ -19,6 +19,8 @@ of development, and there doesn't seem to be a continuous runner configured for 
 
 ## Setup
 
+### app
+
 We start with a simple `Dockerfile`.  Notably, this `Dockerfile` differs from the one at the root
 level of the repository.
 ```
@@ -58,10 +60,20 @@ server: {
     port: 5173,
 }
 ```
+Some minor changes were made to `.prettierrc`.
+
+### app2
 
 `app2` was created in a similar manner, but chose `Skeleton project` rather than the `SvelteKit Demo app`.
 
-Some minor changes were made to `.prettierrc`.
+Then, we followed the [tailwind/sveltekit installation instructions](https://tailwindcss.com/docs/guides/sveltekit).
+
+```
+npm install -D tailwindcss postcss autoprefixer svelte-preprocess
+npx tailwindcss init tailwind.config.cjs -p
+# Update svelte.config.js
+# Update tailwind.config.cjs
+```
 
 ## Historical Archive
 These are internal notes and can be disregarded for all but the most avid readers.
